@@ -1,0 +1,57 @@
+// @use '../abstracts/' as *;
+// @use '../base/' as *;
+
+// .cta {
+//   border: 1px solid black;
+//   background: url('/images/bg-pattern-how-we-work-mobile.svg') no-repeat right
+//       top,
+//     $clr-primary-dark-violet;
+//   margin: 6rem 1rem;
+//   color: white;
+//   text-align: center;
+//   padding: 4.5rem 1rem;
+//   max-width: 80rem;
+
+//   @include media-query(large) {
+//     display: flex;
+//     justify-content: space-between;
+//     margin: 0 auto;
+//     background: url('/images/bg-pattern-how-we-work-desktop.svg') no-repeat
+//         right,
+//       $clr-primary-dark-violet;
+//   }
+//   &__title {
+//     font-family: $ff-primary-dm-serif;
+//     font-size: 2.5rem;
+//     display: block;
+//     font-weight: 400;
+//     line-height: 2.5rem;
+//     padding: 1rem 0;
+//     @include media-query(large) {
+//       font-size: 3rem;
+//       line-height: 3rem;
+//     }
+//     &-container {
+//       @include media-query(large) {
+//         max-width: 30rem;
+//         text-align: left;
+//         padding-left: 3rem;
+//       }
+//     }
+//   }
+//   &__button {
+//     color: white;
+//     text-transform: uppercase;
+//     padding: 0.3rem 1.5rem;
+//     @include media-query(large) {
+//       background: $clr-primary-dark-violet;
+//       border: 1px solid white;
+//       padding: 0.3rem 1rem;
+//       font-size: 1rem;
+//       margin: 2.8rem 4rem;
+//     }
+//     &:hover{
+//        box-shadow: 0px 0px 13px 4px rgba(250, 250, 250, 0.58);
+//     }
+//   }
+// }

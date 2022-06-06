@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+.nav-container {
+  @include media-query(large) {
+    //background-color: rgb(167, 167, 167);
+    max-width: 900px;
+    margin: 0 auto;
+    border: solid black 1px;
+  }
+  //padding: 0 clamp(1.5rem, 2vw, 2rem);
+  display: flex;
+  justify-content: space-between;
+  max-width: 70rem;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav {
+  display: flex;
+  padding: 0 1rem;
+}

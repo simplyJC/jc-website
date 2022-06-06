@@ -1,0 +1,61 @@
+// @use '../base/' as *;
+// body {
+//   // font-family: $ff-primary-karla;
+//   font-size: 1rem;
+//   min-height: 100vh;
+// }
+@use '../abstracts' as *;
+
+body {
+  background-color: #f2fcfd;
+  font-size: 1rem;
+  min-height: 100vh;
+  width: 100%;
+  // @include media-query(large) {
+  //   display: grid;
+  //   align-items: flex-start;
+  //   justify-content: center;
+  // }
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.custom-logo {
+  height: 4rem;
+  width: 5rem;
+}
+
+// .nav-container {
+//   @include media-query(large) {
+//     //background-color: rgb(167, 167, 167);
+//     max-width: 900px;
+//     margin: 0 auto;
+//     border: solid black 1px;
+//   }
+//   //padding: 0 clamp(1.5rem, 2vw, 2rem);
+//   display: flex;
+//   justify-content: space-between;
+//   max-width: 70rem;
+// }
+// .menu {
+//   display: flex;
+//   align-items: center;
+//   gap: 2rem;
+// }
+// .nav {
+//   display: flex;
+//   padding: 0 1rem;
+// }
+
+

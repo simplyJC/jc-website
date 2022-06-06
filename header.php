@@ -6,6 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Gulp BoilerPlate 2022</title>
  <?php
- wp_head();
- ?>
+wp_head();
+?>
 </head>
+<body>
+ <header class="header">
+    <div class="nav-container">
+    <?php the_custom_logo();?>
+   
+      <nav class="nav">
+        <?php wp_nav_menu(array(
+          'theme_location' => 'primary',
+          'container' => false));
+          ?>
+      </nav>
+    </div>
+  </header>
