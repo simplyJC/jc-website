@@ -50,7 +50,7 @@
 //     color: $clr-neutral-grayish-violet;
 //     padding: 0 0.5rem;
 //     &:hover{
-      
+
 //     }
 //   }
 //   &__links {
@@ -93,8 +93,12 @@
 // .attribution a {
 //   color: hsl(228, 45%, 44%);
 // }
-footer{
+footer {
   min-height: 3rem;
-  border: 1px solid;
   text-align: center;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(247, 242, 242);
 }

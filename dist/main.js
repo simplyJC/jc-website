@@ -1,2 +1,2 @@
-console.log("JS is working");
+const nav=document.querySelector(".nav"),menuBtn=document.querySelector(".nav__menu");menuBtn.addEventListener("click",(()=>{nav.classList.toggle("nav--show")})),window.addEventListener("resize",(()=>{window.innerWidth>=500&&nav.classList.remove("nav--show")}));
 //# sourceMappingURL=main.js.map

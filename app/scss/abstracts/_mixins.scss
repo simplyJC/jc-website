@@ -1,6 +1,5 @@
 @use 'sass:map';
-@use 'variables' as *; 
-
+@use 'variables' as *;
 
 @mixin media-query($key) {
   $size: map-get($breakpoints, $key);
@@ -10,5 +9,6 @@
   }
 }
 
-
-
+@mixin border-guide($color: black) {
+  border: 1px solid;
+}

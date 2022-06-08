@@ -65,25 +65,46 @@ if (!function_exists('jcwebsite_setup')):
             'unlink-homepage-logo' => true,
         );
 
+        //Enable logo image support
         add_theme_support('custom-logo', $defaults);
+        //Enable Dynamic Title Tag Support
+        add_theme_support('title-tag');
 
-  }
+    }
 endif;
- // jcwebsite_setup
+// jcwebsite_setup
 add_action('after_setup_theme', 'jcwebsite_setup');
 
-//adding css
-function add_theme_scripts()
+//adding css and JS
+function jcwebsite_add_theme_scripts()
 {
     wp_enqueue_style('style', get_template_directory_uri() . '/dist/style.css', array(), '1.1', 'all');
 
-    wp_enqueue_script('main', get_template_directory_uri() . '/dist/main.js', NULL, 1.1, true);
+    wp_enqueue_script('main', get_template_directory_uri() . '/dist/main.js', null, 1.1, true);
+    //Single Font
+    wp_enqueue_style('custom_google_fonts', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap', [], null);
+
+    //Applying multiple fonts
+    // wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400&family=Neuton:ital,wght@0,300;0,400;0,700;1,400&display=swap', [], null );
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
+
 }
-add_action('wp_enqueue_scripts', 'add_theme_scripts');
+add_action('wp_enqueue_scripts', 'jcwebsite_add_theme_scripts');
+//Custom Function to show About Me page in HomePage
+function custom_show_page_excerpt($path, $length)
+{
+    $post = get_page_by_path($path);
+    $content = apply_filters('the_content', $post->post_content);
+    echo wp_trim_words($content, $length);
+}
+function custom_show_page_title($id)
+{
+    $post = get_post($id);
+    $title = apply_filters('the_content', $post->post_title);
+    echo $title;
+}
 
-
-
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');

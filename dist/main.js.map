@@ -1,1 +1,1 @@
-{"version":3,"file":"main.js","names":["console","log"],"sources":["main.js"],"mappings":"AAAAA,QAAQC,IAAI"}
+{"version":3,"file":"main.js","names":["nav","document","querySelector","menuBtn","addEventListener","classList","toggle","window","innerWidth","remove"],"sources":["main.js"],"mappings":"AAAA,MAAMA,IAAMC,SAASC,cAAc,QAC7BC,QAAUF,SAASC,cAAc,cAEvCC,QAAQC,iBAAiB,SAAS,KAChCJ,IAAIK,UAAUC,OAAO,gBAGvBC,OAAOH,iBAAiB,UAAU,KACZG,OAAOC,YACN,KACnBR,IAAIK,UAAUI,OAAO"}

@@ -1,7 +1,22 @@
 <?php get_header()?>
 <div class="content-main-container">
 
-  <div class="content__main-title text-center"><h1>Welcome to my Blog</h1></div>
+  <div class="content__main-title text-center"><h1>
+    <?php
+//Post a title in Archive Page
+//     if (is_category()) {
+//     single_cat_title();
+//     }
+//     if (is_author()) {
+//    echo "Post by: "; the_author();
+//     }
+//Alternative Way
+the_archive_title()
+
+?>
+  </h1>
+  <p><?php the_archive_description() ?></p>
+  </div>
   <div class="content-container">
 
 
@@ -16,11 +31,9 @@
         </p>
       </div>
       <div class="content__excerpt">
-         <div class="content__img "><?php the_post_thumbnail('large');
-
-    ?></div>
-    <span class="content__caption"><?php the_post_thumbnail_caption()?></span>
-        <?php the_content();?>
+        <?php the_excerpt();?>
+        <p class="content__link"><a href="<?php the_permalink();?>">Continue Reading &raquo;
+          </a></p>
       </div>
     </div>
     <?php }
@@ -28,5 +41,7 @@
 ?>
   </div>
 </div>
+<div class="text-center"><?php echo paginate_links();
+?></div>
 <?php get_footer()?>
-SINGLE
+ARCHIVE
