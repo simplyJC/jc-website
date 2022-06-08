@@ -29,4 +29,4 @@
   </div>
 </div>
 <?php get_footer()?>
-SINGLE
+SINGLE Page
