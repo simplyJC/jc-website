@@ -22,12 +22,14 @@
             </a></p>
         </div>
       </div>
-      <?php }
-    //shows pages
+      <?php } 
     ?>
+
     </div>
   </div>
+
   <div class="text-center"><?php echo paginate_links();
-    ?></div>
+    ?>
+  </div>
 <?php get_footer()?>
 HOME

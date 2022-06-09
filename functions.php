@@ -107,4 +107,22 @@ function custom_show_page_title($id)
     echo $title;
 }
 
+/**
+ * Code to Remove Email in Comment Form  * */
+function jcwebsite_remove_email($email_remove)
+{
+    unset($email_remove['email']);
+    return $email_remove;
+}
+  add_filter('comment_form_default_fields', 'jcwebsite_remove_email');
+
+/**
+ * Code to Remove URL in Comment Form* */
+function jcwebsite_remove_url($url_remove)
+{
+    unset($url_remove['url']);
+    return $url_remove;
+}
+add_filter('comment_form_default_fields', 'jcwebsite_remove_url');
+
 add_filter('acf/settings/remove_wp_meta_box', '__return_false');

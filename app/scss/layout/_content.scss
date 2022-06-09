@@ -1,7 +1,7 @@
 @use '../abstracts/' as *;
 .content-container {
-  max-width: $desktop-width;
-  width: 90%;
+  max-width: 40rem;
+  width: 80%;
   //align-self: flex-start;
   justify-self: center;
   align-self: center;
